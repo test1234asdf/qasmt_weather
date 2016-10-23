@@ -1,0 +1,351 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<title> Data Visualisation </title>
+		<link rel= "stylesheet" type="text/css" href = "../CSS/data_visual.css" />
+	</head>
+	<body>
+		<center>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+		<script>
+		$(document).ready(function() {
+		$('.nav-tabs > li > a').click(function(event){
+		event.preventDefault();//stop browser to take action for clicked anchor
+
+		//get displaying tab content jQuery selector
+		var active_tab_selector = $('.nav-tabs > li.active > a').attr('href');
+
+		//find actived navigation and remove 'active' css
+		var actived_nav = $('.nav-tabs > li.active');
+		actived_nav.removeClass('active');
+
+		//add 'active' css into clicked navigation
+		$(this).parents('li').addClass('active');
+
+		//hide displaying tab content
+		$(active_tab_selector).removeClass('active');
+		$(active_tab_selector).addClass('hide');
+
+		//show target tab content
+		var target_tab_selector = $(this).attr('href');
+		$(target_tab_selector).removeClass('hide');
+		$(target_tab_selector).addClass('active');
+	     });
+		});
+		</script>
+		<div id = "wrapper">
+			<div id = "topbar">
+				<a href="index.html"> HPC </a>
+			</div>
+			<div id = "taskbar">
+				<ul>
+					<li>      </li>
+					<li> <a href = "temp.html"> Temperature </a> </li>
+					<li> <a href = "humidity.html"> Humidity </a> </li>
+					<li> <a href = "sound.html"> Sound </a> </li>
+					<li> <a href = "light.html"> Light  </a> </li>
+					<li> <a href = "pressure.html"> Pressure </a> </li>
+					<li> <a href = "index.html"> About Us </a> </li>
+				</ul>
+			</div>
+			<br />
+			<br />
+			<div id = "leftbar">
+				
+			</div>
+			<div id = "rightbar">
+			</div>
+			<div id = "background">
+			<div id = "content">
+				<div id = "hpc">
+				<div id = "titles">
+					<h2> WHAT IS HPC</h2>
+				</div>
+				<p>High Perfomance Computing club (HPC) is one of the many clubs offered at the Queensland Academy for Science, Maths and Technology (QASMT). 
+				This club is for students who are interested in computers and computer coding. In this club, we embark on many different project to either 
+				help educate others about technology or help create an impact on the community. Currently we have 3 ongoing projects, The Weather Project (Year 10), 
+				Scracth Workshop (Year 11) and a Supercomputing Project for the Year 12.</p>
+				</div>
+				<div id = "weather_project">
+				<br />
+				<div id = "titles">
+					<h2> WEATHER PROJECT</h2>
+				</div>
+				<p> The Weather Project aims to provide data on the Weather at QASMT. Currently we are observing the weather of our recently built, open planned building (J Block) in our school.
+				</p>
+				</div>
+				<br />
+				<div id = "memebers">
+				<div id = "titles">	
+					<h2> MEMBERS </h2>
+				</div>
+				<p> There are 14 members who are currently working on the Weather Projects. Through this project, we have connected through our love for computers and our similar sense of humour,
+				especially our love for memes (hence the name memebers). Within the 14 of us, there are 4 different teams of people focusing on different areas of the project, these teams are the Software,
+				Hardware, Database and Visualisation. Below are the Memelicious and Memerable Memebers profiles, they have either choosen a picture of themselves or a picture that represents them the most. </p>
+				</div>
+				<div id = "profile">
+					<div>
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a href="#tab1"> Database </a>
+							</li>
+							<li>
+								<a href="#tab2"> Software </a>
+							</li>
+							<li>
+								<a href="#tab3"> Visualisation </a>
+							</li>
+							<li>
+								<a href="#tab4"> Hardware </a>
+							</li>
+						</ul>
+					</div>
+					<section id="tab1" class="tab-content active">
+						<div>
+							<table height = "500" width = "700">
+							<tr>
+									<td width= "350"> <img src = "../Images/tyler.jpeg" height = "200" width = "200" /> </td>
+									<td width = "350"> <img src = "../Images/potato.png" height="150" width ="250" /> <td/>
+								</tr>
+								<tr> 
+									<td width = "350"> <b> Name: </b> Tyler Bailey </td> 
+									<td width = "350"> <b> Name: </b> Conner Willson </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Role: </b> Database </td>
+									<td width = "350"> <b> Role: </b> Database </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Likes: </b> Hearthstone, memes and all the compsci, Harambe  </td>
+									<td width = "350"> <b> Likes: </b> I enjoy reading a ridiculous amount and playing <br /> video games, especially strategy ones </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Dislikes: </b> English lecture theatre, Cincinnati Zoo </td>
+									<td width = "350"> <b> Dislikes: </b> I really, really dislike seafood, it is the worst <br /> thing in the world </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Why have I joined HPC: </b> Even more CompSci  </td>
+									<td width = "350"> <b> Why have I joined HPC: </b> I joined HPC since I enjoy working with technology and <br /> this seemed like a great opportunity to do so, the chance <br /> to go to America was just icing on the cake  </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Future Aspiration: </b> Code something half decent </td>
+									<td width = "350"> <b> Future Aspiration: </b> Hopefully in the future I'll be working as a diplomat, mainly <br />focusing on trade, since that is a large part of Australia's <br /> economy </td>
+								</tr>
+								</table>
+						</div>
+					</section>
+					<section id="tab2" class="tab-content hide">
+						<div>
+							<table height = "500" width = "750">
+								<tr>
+									<td> <img src = "../Images/Ramtin.jpg" height = "200" width = "150" /> </td>
+									<td> <img src = "../Images/Josh.png" height="150" width ="250" /> <td/>
+								</tr>
+								<tr> 
+									<td> <b> Name: </b> Ramtin Radnia </td> 
+									<td> <b> Name: </b> Joshua Gilligan </td>
+								</tr>
+								<tr>
+									<td> <b> Role: </b> Software </td>
+									<td> <b> Role: </b> Software </td>
+								</tr>
+								<tr>
+									<td> <b> Likes: </b> Mr May </td>
+									<td> <b> Likes: </b> Meeting new people and having fun coding. Also eating. </td>
+								</tr>
+								<tr>
+									<td> <b> Dislikes: </b> Anyting but Mr May </td>
+									<td> <b> Dislikes: </b> When people dab </td>
+								</tr>
+								<tr>
+									<td> <b> Why have I joined HPC: </b> To extend my knowledge of computer science and to get closer to Mr May  </td>
+									<td> <b> Why have I joined HPC: </b> I really wanted to extended my computer science  knowledge and have an practical <br/> application of coding science and to get closer to Mr May  </td>
+								</tr>
+								<tr>
+									<td> <b> Future Aspiration: </b> President of the National Space Station </td>
+									<td> <b> Future Aspiration: </b> I am really into both computer science and physics; I hope to combine these two interests <br/> in the future. I believe that HPC has and will continue to provide me a view on the overall picture <br /> of technology in our society. Understanding HPC ensures that I can better enter this new connected world. </td>
+								</tr>
+								<tr>
+									<td> <img src = "../Images/potato.gif" height="150" width ="250" /> <td/>
+								</tr>
+								<tr> 
+									<td> <b> Name: </b> Alireza Sharifzadeh</td> 
+								</tr>
+								<tr>
+									<td> <b> Role: </b> Software </td>
+								</tr>
+								<tr>
+									<td> <b> Likes: </b> Programming in general and solving real world problems. Also I like cheese. </td>
+								</tr>
+								<tr>
+									<td> <b> Dislikes: </b> I dislike the fact that I put in 50+ hours of work <br /> into HPC and still didn't get selected for SC. I put more work in than <br /> every selected student apart from gilli. </td>
+								</tr>
+								<tr>
+									<td> <b> Why have I joined HPC: </b> Mainly to go to SC. To have fun and socialize. </td>
+								</tr>
+								<tr>
+									<td> <b> Future Aspiration: </b> Entrepreneur and owner of a major technological brand. <br /> With the backup of going into specialist medicine.  </td>
+								</tr>
+							</table>
+						</div>
+					</section>
+					<section id="tab3" class="tab-content hide">
+						<div>
+							<table height = "500" width = "750">
+								<tr>
+									<td> <img src = "../Images/Courtney.jpg" height = "200" width = "200" /> </td>
+									<td> <img src = "../Images/Angela.jpg" height="200" width ="150" /> <td/>
+								</tr>
+								<tr> 
+									<td> <b> Name: </b> Courtney Zhan </td> 
+									<td> <b> Name: </b> Angela Truffet </td>
+								</tr>
+								<tr>
+									<td> <b> Role: </b> Visualisation </td>
+									<td> <b> Role: </b> Visualisation </td>
+								</tr>
+								<tr>
+									<td> <b> Likes: </b> Reading, Pelican Statues and sweets </td>
+									<td> <b> Likes: </b> Cats and food </td>
+								</tr>
+								<tr>
+									<td> <b> Dislikes: </b> Spicy food </td>
+									<td> <b> Dislikes: </b> Mondays </td>
+								</tr>
+								<tr>
+									<td> <b> Why have I joined HPC: </b> I'm interested in technology and becoming active in this field </td>
+									<td> <b> Why have I joined HPC: </b> It is interesting. </td>
+								</tr>
+								<tr>
+									<td> <b> Future Aspiration: </b> I want to be a software engineer  </td>
+									<td> <b> Future Aspiration: </b> Doing Actuary or becoming Batman. Preferably both. </td>
+								</tr>
+								<tr>
+									<td> <img src = "../Images/David.jpg" height = "200" width = "150" /> </td>
+									<td> <img src = "../Images/Mark.jpg" height="200" width ="150" /> <td/>
+								</tr>
+								<tr> 
+									<td> <b> Name: </b> David Nguyen </td> 
+									<td> <b> Name: </b> Mark Teoh </td>
+								</tr>
+								<tr>
+									<td> <b> Role: </b> Visualisation </td>
+									<td> <b> Role: </b> Visualisation </td>
+								</tr>
+								<tr>
+									<td> <b> Likes: </b> Computer Coding, Robotics, Mathematics, <br /> Daryl (The Walking Dead character), Carol Soans and Soccer (Football) </td>
+									<td> <b> Likes: </b> Eating, Technology, Diving and Mr May  </td>
+								</tr>
+								<tr>
+									<td> <b> Dislikes: </b> Daryl (the movie), Vivid (the store) and Analogue Clocks </td>
+									<td> <b> Dislikes: </b> Harry and the Rocket Club </td>
+								</tr>
+								<tr>
+									<td> <b> Why have I joined HPC: </b> To get good at CompSci, and because I wanted to  challenge myself with a large-scale project </td>
+									<td> <b> Why have I joined HPC: </b> It seemed like a great opportunity  </td>
+								</tr>
+								<tr>
+									<td> <b> Future Aspiration: </b> IB 45, beat BBC, get gooder at coding </td>
+									<td> <b> Future Aspiration: </b> To work in the field of IT and/or Engineering </td>
+								</tr>
+							</table>
+						</div>
+					</section>
+						</div>
+					</section>
+					<section id="tab4" class="tab-content hide">
+						<div>
+							<table height = "500" width = "750">
+								<tr>
+									<td> <img src = "../Images/Bryon.jpg" height = "200" width = "150" /> </td>
+									<td> <img src = "../Images/James_Hudson.jpg" height="150" width ="250" /> <td/>
+								</tr>
+								<tr> 
+									<td width = "350"> <b> Name: </b> Byron Downey</td> 
+									<td width = "350"> <b> Name: </b> James Hudson</td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Role: </b> Hardware </td>
+									<td width = "350"> <b> Role: </b> Hardware </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Likes: </b>  Gaming </td>
+									<td width = "350"> <b> Likes: </b> I deeply enjoy creating different types of computers in my free time, whether it be my laptop, desktop or Raspberry Pis. I also enjoy creating circuits via the use of soldering, wiring and programming.</td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Dislikes: </b> English </td>
+									<td width = "350"> <b> Dislikes: </b> My main dislike in the world is when things do not work.  </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Why have I joined HPC: </b> Because I am interested in computer science </td>
+									<td width = "350"> <b> Why have I joined HPC: </b> I joined HPC because I WANT TO CHANGE THE WORLD!!! (Also I want to build things) </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Future Aspiration: </b> I am looking to be an engineer, which will more than likely involve computers </td>
+									<td width = "350"> <b> Future Aspiration: </b> My future aspiration is to become the leader of the world. Or to become rich. Or both.  </td>
+								</tr>
+								<tr>
+									<td width = "350"> <img src = "../Images/Ramtin.jpg" height = "200" width = "150" /> </td>
+									<td width = "350"> <img src = "../Images/potato.gif" height="150" width ="250" /> <td/>
+								</tr>
+								<tr> 
+									<td width = "350"> <b> Name: </b> Jayden Grubb </td> 
+									<td width = "350"> <b> Name: </b> Thomas Petersen </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Role: </b> Hardware </td>
+									<td width = "350"> <b> Role: </b> Hardware </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Likes: </b> Digital Clocks </td>
+									<td width = "350"> <b> Likes: </b> Computers, pizza, and my cat (Archie)</td>
+								</tr>
+								<tr>
+									<td width = "350"><b> Dislikes: </b> Analogue Clocks </td>
+									<td width = "350"><b> Dislikes: </b> The subject English </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Why have I joined HPC: </b> Adventure? </td>
+									<td width = "350"> <b> Why have I joined HPC: </b> To become involved with the HPC Project and the community surrounding it </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Future Aspiration: </b> To become the best man I could ever be </td>
+									<td width = "350"> <b> Future Aspiration: </b> Unknown </td>
+								</tr>
+								<tr>
+									<td width = "350"> <img src = "../Images/Neil.jpg" height = "200" width = "150" /> </td>
+									<td width = "350"> <img src = "../Images/potato.png" height="150" width ="250" /> <td/>
+								</tr>
+								<tr> 
+									<td width = "350"> <b> Name: </b> Xinyu (Neil) Zhang </td> 
+									<td width = "350"> <b> Name: </b> ---------- </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Role: </b> Hardware </td>
+									<td width = "350"> <b> Role: </b> Hardware </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Likes: </b> Immortality</td>
+									<td width = "350"> <b> Likes: </b> --------------</td>
+								</tr>
+								<tr>
+									<td width = "350"><b> Dislikes: </b> . My life, me, myself, and I </td>
+									<td width = "350"><b> Dislikes: </b> ----------- </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Why have I joined HPC: </b> Why not </td>
+									<td width = "350"> <b> Why have I joined HPC: </b> -------------- </td>
+								</tr>
+								<tr>
+									<td width = "350"> <b> Future Aspiration: </b>  Astronaut/Space pilot/Deadpool/Immortal person/Space traveller. All of the above </td>
+									<td width = "350"> <b> Future Aspiration: </b> ------------- </td>
+								</tr>
+								
+						</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		</center>
+	</body>
+</html>
