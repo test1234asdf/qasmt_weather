@@ -1,0 +1,407 @@
+<! DOCTYPE html>
+	<html>
+		<head>
+			<title> Weather @ QASMT </title>
+			
+			<link rel= "stylesheet" type="text/css" href = "../CSS/data_visual.css" />
+			
+			<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+			
+			<script>
+			
+				$(document).ready(function() {
+					$('.nav-tabs > li > a').click(function(event){
+					
+						//stop browser to take action for clicked anchor
+						
+						event.preventDefault();
+
+						//get displaying tab content jQuery selector
+						
+						var active_tab_selector = $('.nav-tabs > li.active > a').attr('href');
+
+						//find actived navigation and remove 'active' css
+						
+						var actived_nav = $('.nav-tabs > li.active');
+						actived_nav.removeClass('active');
+
+						//add 'active' css into clicked navigation
+						
+						$(this).parents('li').addClass('active');
+
+						//hide displaying tab content
+						
+						$(active_tab_selector).removeClass('active');
+						$(active_tab_selector).addClass('hide');
+
+						//show target tab content
+						
+						var target_tab_selector = $(this).attr('href');
+						$(target_tab_selector).removeClass('hide');
+						$(target_tab_selector).addClass('active');
+					});
+				});
+				
+			</script>
+			
+		</head>
+		
+		<body>
+			<center>
+				<div id = "wrapper">
+				
+					<br> <br>
+				
+					<div id = "topbar">
+						<a href="index.html"> Weather @ QASMT - High Performance Computing </a>
+					</div>
+				
+					<br> <br>
+					
+					<div id = "taskbar">
+						<ul>						
+							<li> <a href = "index.html"> About Us </a> </li>
+							<li> <a href = "temp_heatmap.php"> Temperature </a> </li>
+							<li> <a href = "humidity_heatmap.php"> Humidity </a> </li>
+							<li> <a href = "sound_heatmap.php"> Sound </a> </li>
+							<li> <a href = "light_heatmap.php"> Light  </a> </li>
+							<li> <a href = "pressure_heatmap.php"> Pressure </a> </li>
+						</ul>
+					</div>
+					
+					<br> <br>
+					
+					<div id = "leftbar"> </div>
+					
+					<div id = "rightbar"> </div>
+					
+					<br> <br>
+					
+					<div id = "content">
+					
+						<div id = "hpc">
+						
+							<br> <br>
+							
+							<h2> What is HPC? </h2>
+						
+							<p>
+								High Perfomance Computing club (HPC) is one of the many clubs offered at the Queensland Academy for 
+								Science, Maths and Technology (QASMT).  This club is for students who are interested in computers and 
+								computer coding. In this club, we embark on many different project to either help educate others about 
+								technology or help create an impact on the community. Currently we have 3 ongoing projects, The Weather 
+								Project (Year 10), Scratch Workshop (Year 11) and a Supercomputing Project for the Year 12.
+							</p>
+							
+							<br> <br>
+							
+						</div>
+						
+						<br> <br>
+						
+						<div id = "weather_project">
+						
+							<br> <br>
+							
+							<h2> Weather @ QASMT Project </h2>
+							
+							<p>
+								The Weather @QASMT Project aims to provide data on the Weather at QASMT. Currently we are observing the weather of our recently built, open planned
+								building (J Block) in our school.
+							</p>
+						
+							<br> <br>
+							
+						</div>
+						
+						<br> <br>
+						
+						<div id = "memebers">
+						
+							<br> <br>
+							
+							<h2> MEMEbers </h2>
+							
+							<p>
+								There are 14 memebers who are currently working on the Weather Projects. Through this project, we have 
+								connected through our love for computers and similar sense of humour, especially our love for memes 
+								(hence the name, MEMEbers). Within the 14 of us, there are 4 different teams of people focusing on 
+								different areas of the project. These teams are Software, Hardware, Database and Visualisation.
+							</p>
+
+							<p> To see the people involved in this project, see below: </p>
+						
+							<br> <br>
+							
+						</div>
+						
+						<br> <br>	
+						
+						<div id = "profile">
+						
+							<div>
+								<ul class="nav nav-tabs">
+									<li class="active"> <a href="#tab1"> Hardware </a> </li>
+									<li> <a href="#tab2"> Software </a> </li>									
+									<li> <a href="#tab3"> Visualisation </a> </li>								
+									<li> <a href="#tab4"> Database </a> </li>
+								</ul>
+							</div>
+							
+							<section id="tab1" class="tab-content active">
+								<div id = "software">
+									<table height = "200" width = "1000" align="center" cellpadding="50">
+									
+										<tr>
+										
+											<td align = "center" style="vertical-align:top" width="500">
+											
+												<img src = "../Images/Ramtin.jpg" height = "200" width = "150" />
+												
+												<br> <br>
+												
+												<b> Name: </b> Ramtin Radnia
+												
+												<br> <br>
+												
+												<b> Role: </b> Software
+												
+												<br> <br>
+												
+												<b> Likes: </b> Mr May
+												
+												<br> <br>
+												
+												<b> Dislikes: </b> Anyting but Mr May
+												
+												<br> <br>
+												
+												<b> Why have I joined HPC: </b> To extend my knowledge of computer science and to get closer to Mr May
+												
+												<br> <br>
+												
+												<b> Future Aspiration: </b> President of the National Space Station
+											
+											</td>
+											
+											<td align = "center" style="vertical-align:top" width="500">
+											
+												<img src = "../Images/Josh.png" height="150" width ="250" />
+												
+												<br> <br>
+												
+												<b> Name: </b> Joshua Gilligan
+												
+												<br> <br>
+												
+												<b> Role: </b> Software
+												
+												<br> <br>
+												
+												<b> Likes: </b> Meeting new people and having fun coding. Also eating.
+												
+												<br> <br>
+												
+												<b> Dislikes: </b> When people dab
+												
+												<br> <br>
+												
+												<b> Why have I joined HPC: </b> I really wanted to extended my computer science  knowledge and have an practical <br>
+																				 application of coding science and to get closer to Mr May. <br>
+												
+												<br> <br>
+												
+												<b> Future Aspiration: </b> I am really into both computer science and physics; I hope to combine these two interests <br>
+																			 in the future. I believe that HPC has and will continue to provide me a view on the overall picture <br>
+																			 of technology in our society. Understanding HPC ensures that I can better enter this new connected world. <br>
+												
+											</td>
+											
+											<td align = "center" style="vertical-align:top" width="500">
+
+												<img src = "../Images/potato.gif" height="150" width ="250" />
+												
+												<br> <br>
+												
+												<b> Name: </b> Alireza Sharifzadeh
+												
+												<br> <br>
+												
+												<b> Role: </b> Software
+												
+												<br> <br>
+												
+												<b> Likes: </b> Programming in general and solving real world problems. Also I like cheese.
+												
+												<br> <br>
+												
+												<b> Dislikes: </b> I dislike the fact that I put in 50+ hours of work into HPC and still didn't get selected for SC.
+																	I put more work in than every selected student apart from gilli.
+												
+												<br> <br>
+												
+												<b> Why have I joined HPC: </b> Mainly to go to SC. To have fun and socialize.
+												
+												<br> <br>
+												
+												<b> Future Aspiration: </b> Entrepreneur and owner of a major technological brand. With the backup of going into specialist medicine.
+											
+											</td>
+											
+										</tr>
+										
+									</table>
+								</div>
+							</section>
+							
+							<section id="tab2" class="tab-content hide">
+								<div>
+									<table height = "200" width = "1000" align="center" cellpadding="50">
+									
+										<tr>
+										
+											<td align = "center" style="vertical-align:top">
+											
+												<img src = "../Images/Courtney.jpg" height = "200" width = "200" />
+												
+												<br> <br>
+												
+												<b> Name: </b> Courtney Zhan
+												
+												<br> <br>
+												
+												<b> Role: </b> Visualisation
+												
+												<br> <br>
+												
+												<b> Likes: </b> Reading, Pelican statues and sweets
+												
+												<br> <br>
+												
+												<b> Dislikes: </b> Spicy food
+												
+												<br> <br>
+												
+												<b> Why have I joined HPC: </b> I'm interested in technology and becoming active in this field
+												
+												<br> <br>
+												
+												<b> Future Aspiration: </b> I want to be a software engineer
+											
+											</td>
+											
+											<td align = "center" style="vertical-align:top">
+											
+												<img src = "../Images/Angela.jpg" height="200" width ="150" />
+												
+												<br> <br>
+												
+												<b> Name: </b> Angela Truffet
+												
+												<br> <br>
+												
+												<b> Role: </b> Visualisation
+												
+												<br> <br>
+												
+												<b> Likes: </b> Cats and food (especially vegetables)
+												
+												<br> <br>
+												
+												<b> Dislikes: </b> Mondays
+												
+												<br> <br>
+												
+												<b> Why have I joined HPC: </b> It is interesting.
+												
+												<br> <br>
+												
+												<b> Future Aspiration: </b> Doing Actuary or becoming Batman. Preferably both.
+												
+											</td>
+											
+											<td align = "center" style="vertical-align:top">
+											
+												<img src = "../Images/David.jpg" height = "200" width = "150" />
+												
+												<br> <br>
+												
+												<b> Name: </b> David Nguyen
+												
+												<br> <br>
+												
+												<b> Role: </b> Visualisation
+												
+												<br> <br>
+												
+												<b> Likes: </b> Computer Coding, Robotics, Mathematics, <br /> Daryl (The Walking Dead character), Carol Soans and Soccer (Football)
+												
+												<br> <br>
+												
+												<b> Dislikes: </b> Daryl (the movie), Vivid (the store) and Analogue Clocks
+												
+												<br> <br>
+												
+												<b> Why have I joined HPC: </b> To get good at CompSci, and because I wanted to challenge myself with a large-scale project
+												
+												<br> <br>
+												
+												<b> Future Aspiration: </b> IB 45, beat BBC, get gooder at coding
+											
+											</td>
+											
+											<td align = "center" style="vertical-align:top">
+											
+												<img src = "../Images/Mark.jpg" height="200" width ="150" />
+												
+												<br> <br>
+												
+												<b> Name: </b> Mark Teoh
+												
+												<br> <br>
+												
+												<b> Role: </b> Visualisation
+												
+												<br> <br>
+												
+												<b> Likes: </b> Eating, Technology, Diving and Mr May
+												
+												<br> <br>
+												
+												<b> Dislikes: </b> Harry and the Rocket Club
+												
+												<br> <br>
+												
+												<b> Why have I joined HPC: </b> It seemed like a great opportunity
+												
+												<br> <br>
+												
+												<b> Future Aspiration: </b> To work in the field of IT and/or Engineering
+											
+											</td>
+											
+										</tr>
+										
+									</table>
+								</div>
+							</section>
+							
+							<section id="tab3" class="tab-content hide">
+								<div>
+									Blank
+								</div>
+								
+							</section>
+							
+							<section id="tab4" class="tab-content hide">
+								<div>
+									Blank
+								</div>
+							</section>
+							
+						</div>
+					</div>
+				</div>
+			</center>
+		</body>
+	</html>

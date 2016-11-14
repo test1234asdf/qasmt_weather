@@ -1,0 +1,184 @@
+#wrapper{
+	height: 2100px;
+	width: 1600px;
+	background-color: #0BCDE0;
+}
+
+#topbar{
+	height: 50px;
+	width: 1500px; 
+	margin-bottom:10px;
+}
+
+#taskbar{
+	height: 50px;
+	width: 1500px;
+}
+
+#taskbar ul, #topbar ul, #profile ul{
+	display: inline-block;
+	list-style-type: none;
+	padding: 0px;
+}
+
+#taskbar li{
+	float: left;
+}
+
+#taskbar a, #topbar a{
+	display: block;
+	width: 200px;
+	background-color: #0000FF;
+	color: #FFFFFF;
+	padding: 14px;
+	font-size: 20px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+}
+
+#topbar a{
+	background-color: #0BCDE0;
+	font-family: Helvetica;
+	font-size: 48px;
+	width: 1500px;
+}
+
+
+#taskbar a:hover, a:active{
+	background-color: #00FA00;
+}
+
+#leftbar, #rightbar{
+	height: 100%;
+	width: 50px;
+}
+
+#leftbar{
+	float: left;
+}
+
+#hpc{
+	background-color: #99AA01;
+	width: 1268px;
+	padding-right: 50px;
+	padding-left: 50px;
+	font-family: Helvetica;
+	font-size: 20px;
+}
+
+#weather_project{
+	background-color: #00FA99;
+	width: 1268px;
+	padding-right: 50px;
+	padding-left: 50px;
+	font-family: Helvetica;
+	font-size: 20px;
+}
+
+#memebers{
+	background-color: #99FA00;
+	width: 1268px;
+	padding-right: 50px;
+	padding-left: 50px;
+	font-family: Helvetica;
+	font-size: 20px;
+}
+
+#rightbar{
+	float: right;
+}
+
+#content p{
+	font-family: arial;
+	text-align: left;
+	width: 1268px;
+}
+
+#visualisation{
+	text-align: left;
+}
+
+.nav {
+	margin-bottom: 18px;
+	margin-left: 0;
+	list-style: none;
+	}
+
+.nav > li > a {
+	display: block;
+}
+
+.nav-tabs{
+	*zoom: 1;
+}
+
+.nav-tabs:before, .nav-tabs:after {
+	display: table;
+	content: "";
+}
+
+.nav-tabs:after {
+	clear: both;
+}
+
+.nav-tabs > li {
+	float: left;
+}
+
+.nav-tabs > li > a {
+	padding-right: 12px;
+	padding-left: 12px;
+	margin-right: 2px;
+	line-height: 14px;
+}
+
+.nav-tabs {
+	border-bottom: 1px solid #ddd;
+}
+
+.nav-tabs > li {
+	margin-bottom: -1px;
+}
+
+.nav-tabs > li > a {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	line-height: 18px;
+	border: 1px solid transparent;
+		-webkit-border-radius: 4px 4px 0 0;
+			-moz-border-radius: 4px 4px 0 0;
+				border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs > li > a:hover {
+	border-color: #eeeeee #eeeeee #dddddd;
+}
+
+.nav-tabs > .active > a,.nav-tabs > .active > a:hover {
+	color: #555555;
+	cursor: default;
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-bottom-color: transparent;
+}
+
+li {
+	line-height: 18px;
+}
+
+.tab-content.active{
+	display: block;
+}
+
+.tab-content.hide{
+	display: none;
+}
+			
+#software_table_2{
+	float: left;
+}
+
+body{
+	background-color: white;
+}
